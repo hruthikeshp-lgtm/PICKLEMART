@@ -3,6 +3,8 @@ import { getOrders, createOrder, getProductById } from '@/lib/db';
 import { generateOrderReference } from '@/lib/utils';
 import { Order, OrderItem } from '@/types';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: Request) {
   try {
     const authHeader = request.headers.get('authorization');
